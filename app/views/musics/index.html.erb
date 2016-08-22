@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Music list</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @musics.each do |music| %>
+      <tr>
+        <td><%= music.id %></td>
+        <td><%= music.title %></td>
+        <td><%= music.artist %></td>
+        <td><%= music.description %></td>
+        <td><%= link_to 'Show', music %></td>
+        <td><%= link_to 'Edit', edit_music_path(music) %></td>
+        <td><%= link_to 'Destroy', music, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Add new music</h2>
+<%= link_to 'New Music', new_music_path %>
+
+<h2>Send Websocket Request(TODO:本当は一覧に送信ボタンを用意すべき)</h2>
+<form>
+  music IDを入力してEnter
+  <input type="text" data-behavior="show_music">
+</form>
+
+<h2>Now playing(確認)</h2>
+<div id="title"></div>
+<div id="artist"></div>
+<div id="description"></div>
+
+
