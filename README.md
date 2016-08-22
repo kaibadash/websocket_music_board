@@ -4,10 +4,10 @@ It shows music data.
 # How to use
 
 ## Deploy
-```
+```sh
 git clone https://github.com/kaibadash/websocket_music_board
 cd websocket_music_board
-bungle install
+bundle install
 bundle exec rake db:migrate
 rails s
 ```
@@ -20,6 +20,6 @@ http://localhost:3000/musics/new
 Create new tab and access to home page.
 http://localhost:3000/
 
-## Send music data and show it :)
-:)
+## Send music data and show it :sushi:
+:beer:
 
