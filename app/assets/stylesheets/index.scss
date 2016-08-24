@@ -8,11 +8,12 @@ body {
 }
 .led {
     font-family: "LED";
+    font-style: italic;
     overflow: hidden;
     position: relative;
     padding:5px 0;
-    color: #FFB400;
-    background: #333333;
+    color: red;
+    background: #111;
     font-size: 10em;
     font-weight: bold;
     line-height: 1em;
